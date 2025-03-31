@@ -1,5 +1,4 @@
 import NonDashboardNavbar from "@/components/NonDashboardNavbar";
-import Image from "next/image";
 import Landing from "@/app/(nondashboard)/landing/page";
 import Footer from "@/components/Footer";
 

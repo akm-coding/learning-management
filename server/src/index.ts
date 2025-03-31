@@ -15,6 +15,7 @@ import {
 import courseRoutes from "./routes/course.route";
 import userClerkRoutes from "./routes/userClerk.route";
 import transactionRoutes from "./routes/transaction.route";
+import userCourseProgressRoutes from "./routes/userCourserProgress.route";
 
 dotenv.config();
 const isProduction = process.env.NODE_ENV === "production";
@@ -44,6 +45,7 @@ app.get("/", (req, res) => {
 app.use("/courses", courseRoutes);
 app.use("/users/clerk", requireAuth(), userClerkRoutes);
 app.use("/transactions", requireAuth(), transactionRoutes);
+app.use("/users/course-progress", requireAuth(), userCourseProgressRoutes);
 
 const port = process.env.PORT || 3000;
 if (!isProduction) {
